@@ -1,0 +1,24 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: kbfriend
+spec:
+  selector:
+    matchLabels:
+      app: kbfriend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: kbfriend
+    spec:
+      containers:
+      - name: kbfriend
+        image: correiabrux/kbfriend:1.0
+        env:
+        - name: SLACKTOKEN
+          value: "slacktoken"
+        - name: KBTOKEN
+          value: "kanboardtoken"
+        - name: KBURL
+          value: "kanboardurl"
