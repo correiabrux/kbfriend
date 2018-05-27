@@ -160,6 +160,7 @@ def main():
                             movetask(channel,projectid,idtask,idcolumn)
                         elif 'help' == text.split()[1]:
                             message = "```\
+$kb help                                  #Lista Comandos\n\
 $kb listprojects                          #Lista Projetos\n\
 $kb listtasks project                     #Lista Taks\n\
 $kb listcolumns project                   #Lista colulnas\n\
