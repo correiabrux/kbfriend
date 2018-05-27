@@ -5,6 +5,7 @@ import os
 
 slacktoken = os.environ['SLACKTOKEN']
 kbtoken = os.environ['KBTOKEN']
+kburl = os.environ['KBURL']
 
 slack_client = SlackClient(slacktoken)
 kb = Kanboard(kburl, "jsonrpc", kbtoken)
