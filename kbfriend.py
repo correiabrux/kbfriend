@@ -2,6 +2,7 @@ from slackclient import SlackClient
 from kanboard import Kanboard
 import time
 import os
+import sys
 
 slacktoken = os.environ['SLACKTOKEN']
 kbtoken = os.environ['KBTOKEN']
@@ -176,6 +177,6 @@ $kb movetask projectid taskid columnid    #Move Task```"
             time.sleep(1)
     else:
         print('Connection failed, invalid token?')
-
+        sys.exit(1)
 if __name__ == "__main__":
     main()
