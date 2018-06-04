@@ -96,6 +96,7 @@ def listcolumns(channel, projectname):
 def openproject(channel, projectname):
     try:
         project = kb.createProject(name=projectname)
+        kb.addProjectGroup(project_id=project,group_id=2)
         message = "Project Created"
         sendmessage(channel, message)
     except:
